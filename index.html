@@ -81,6 +81,13 @@
       background-size: cover;
       background-repeat: no-repeat;
     }
+
+    @media (max-width:426px){
+      .welcomeText{
+        opacity: 0!important;
+        visibility: hidden;
+      }
+    }
   </style>
   <div class="page_wrapper">
 
@@ -106,30 +113,6 @@
                 <h1 class="hero_title wow" data-splitting>Keep your car looking New</h1>
 
                 <p>Advanced Technology. Poweful Performance. Premium Finish</p>
-                <div class="btnContainer">
-                  <!-- <a class="btn btn-primary" href="#contactus">
-                    <span class="btn_text">Get Service</span>
-                  </a>
-                  <a class="btn btn-secondary" href="about.html">
-                    <span class="btn_text">About Us</span>
-                  </a> -->
-                  <a href="#contactus" class="hbutton">
-                    Get Service
-                    <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                      <path clip-rule="evenodd"
-                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                        fill-rule="evenodd"></path>
-                    </svg>
-                  </a>
-                  <a href="about.html" class="hbutton secondary">
-                    About Us
-                    <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                      <path clip-rule="evenodd"
-                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                        fill-rule="evenodd"></path>
-                    </svg>
-                  </a>
-                </div>
 
                 <style>
                   .hbutton {
@@ -213,16 +196,23 @@
                     justify-content: flex-start;
                     gap: 1rem;
                     flex-direction: column;
+                    transform: translate(1rem, -190%)
                   }
 
                   @media screen and (max-width: 426px) {
                     .btnContainer {
-                      flex-direction: column;
+                      flex-direction: row;
+                      transform: translate(3rem, -90%)
                     }
 
                     .hero_section_content .btn-secondary {
                       margin-top: 0.8rem;
                       margin-left: 0rem;
+                    }
+
+                    .hero_section_content{
+                      position: relative;
+                      top: -55%;
                     }
                   }
                 </style>
@@ -245,6 +235,13 @@
                     bottom: 4.5rem;
                     filter: drop-shadow(30px 20px 4px #0a0a0a);
                   }
+
+                  @media (max-width:426px) {
+                    .hero_section_image{
+                      position: relative;
+    transform: translate(58%,-7rem);
+                    }
+                  }
                 </style>
               </div>
             </div>
@@ -253,6 +250,25 @@
 
         <div class="outline_text" style="-webkit-text-stroke-color: #474747;-webkit-text-stroke-color: #700b13;"
           data-parallax='{"x" : 200, "smoothness": 8}'>Miracle Car Detailers
+        </div>
+
+        <div class="btnContainer">
+          <a href="#contactus" class="hbutton">
+            Get Service
+            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+              <path clip-rule="evenodd"
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                fill-rule="evenodd"></path>
+            </svg>
+          </a>
+          <a href="about.html" class="hbutton secondary">
+            About Us
+            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+              <path clip-rule="evenodd"
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                fill-rule="evenodd"></path>
+            </svg>
+          </a>
         </div>
       </section>
       <section class="hero_service_section">
@@ -268,7 +284,7 @@
             </div>
           </div>
         </div>
-        <div class="carousel_4coldemo">
+        <div class="carousel_4col" data-slick="{'dots': false, 'autoplay': false}">
           <div class="carousel_item">
             <div class="service_item">
               <div class="serial_number outline_text">01</div>
@@ -352,7 +368,7 @@
           }
           }
         </style>
-        <div class="carousel_4coldemo">
+        <div class="carousel_4col" data-slick="{'dots': false, 'autoplay': false}">
           <div class="carousel_item">
             <div class="service_item">
               <div class="serial_number outline_text">05</div>
@@ -471,7 +487,7 @@
           cursor: pointer;
           overflow: hidden;
           transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-          margin: 0.5rem 0 5rem;
+          margin: 1.5rem 0 5rem;
         }
 
         .animated-button svg {

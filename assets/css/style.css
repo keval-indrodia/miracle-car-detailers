@@ -6397,11 +6397,13 @@ Responsive For Mobile & Tablet Devices
     padding: 170px 0 0;
   }
   .hero_section_1 .outline_text {
-    left: 0%;
-    top: 130px;
+    /* left: 0%;
+    top: 130px; */
+    left: 6%;
+    top: 39%;
   }
   .hero_section .outline_text {
-    font-size: 70px;
+    font-size: 84px;
   }
   .hero_section_2 {
     padding: 160px 0 80px;
