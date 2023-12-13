@@ -18,12 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
             //     targets: welcomeWrapper,
             //     opacity: [0, 1], // Fade In
             // })
-            .add({
-                targets: carImg,
-                maskImage: ['linear-gradient(to right, black 0%, black 33%, transparent 33%, transparent 66%, transparent 66%, transparent 100%)', 'none'],
-                easing: 'linear',
-                duration: 800, // Adjust the duration to control the speed of the reveal
-            })
+            // .add({
+            //     targets: carImg,
+            //     maskImage: ['linear-gradient(to right, black 0%, black 33%, transparent 33%, transparent 66%, transparent 66%, transparent 100%)', 'none'],
+            //     easing: 'linear',
+            //     duration: 800, // Adjust the duration to control the speed of the reveal
+            // })
             .add({
                 targets: carImg,
                 opacity: [0, 1], // Fade In
