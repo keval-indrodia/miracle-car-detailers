@@ -73,14 +73,14 @@
 
   // Tilt - Start
   // --------------------------------------------------
-  $('.tilt').tilt({
-    maxTilt:        12,
-    perspective:    1000,
-    scale:          1,
-    speed:          1000,
-    glare:          false,
-    maxGlare:       1
-  });
+  // $('.tilt').tilt({
+  //   maxTilt:        12,
+  //   perspective:    1000,
+  //   scale:          1,
+  //   speed:          1000,
+  //   glare:          false,
+  //   maxGlare:       1
+  // });
   // Tilt - End
   // --------------------------------------------------
 
