@@ -2230,6 +2230,7 @@ blockquote .quote_content {
   left: 20%;
   top: 20px;
   position: absolute;
+  width: 68%;
 }
 
 .hero_section_2 {
