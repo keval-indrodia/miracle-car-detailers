@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
             easing: 'easeInOutCirc',
             duration: 1000,
         })
-            .add({
-                targets: welcomeWrapper,
-                opacity: [0, 1], // Fade In
-            })
+            // .add({
+            //     targets: welcomeWrapper,
+            //     opacity: [0, 1], // Fade In
+            // })
             .add({
                 targets: carImg,
                 maskImage: ['linear-gradient(to right, black 0%, black 33%, transparent 33%, transparent 66%, transparent 66%, transparent 100%)', 'none'],
