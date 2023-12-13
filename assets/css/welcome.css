@@ -1,0 +1,47 @@
+.welcome {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #040404;
+    /* opacity: 0; */
+    z-index: 800; /* Keep the welcome wrapper on top */
+}
+
+.welcomeText{
+    overflow: hidden;
+}
+
+.welcome p {
+    color: white;
+    font-size: 24px;
+    font-size: 40px;
+    margin-top: 20px;
+    /* transform: translateY(-100%); */
+    /* opacity: 0; */
+    font-family: var(--bs-font-body);
+    font-family: var(--bs-font-heading);
+    font-weight: bold;
+    overflow: hidden;
+    margin: 0!important;
+    /* height: 50px; */
+}
+
+.welcome p span{
+    opacity: 0;
+}
+
+.welcome .car-img{
+    
+}
+
+.welcome img {
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+}
