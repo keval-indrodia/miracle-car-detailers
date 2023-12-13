@@ -79,6 +79,41 @@
   --bs-transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+@media screen and (width>=800){
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: red; /* Set the color of the thumb */
+  border-radius: 3px; /* Optional: add rounded corners to the thumb */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ccc; /* Set the color of the track */
+}
+
+/* For Firefox */
+/* Note: Firefox does not support styling the scrollbar directly.
+   You can use the 'scrollbar-color' property, but it is not universally supported as of my knowledge cutoff in January 2022. */
+
+/* For Microsoft Edge and Internet Explorer */
+/* Note: Microsoft Edge and Internet Explorer use a different syntax */
+* {
+  scrollbar-width: thin; /* Set the width of the scrollbar */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--bs-primary); /* Set the color of the thumb */
+  border-radius: 3px; /* Optional: add rounded corners to the thumb */
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #212121; /* Set the color of the track */
+}
+}
+
 
 
 html{

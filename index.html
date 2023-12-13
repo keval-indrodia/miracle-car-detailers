@@ -79,7 +79,8 @@
       background-image: linear-gradient(#000000a8, #000000a8), url('https://i.pinimg.com/736x/43/a1/2b/43a12b2133fe4ddeedb3bb97c78823d2.jpg');
       background-image: linear-gradient(#000000a8, #000000c3), url('https://i.pinimg.com/736x/b3/e7/d3/b3e7d35fcf4fc513df6944b58256c5f3.jpg'); */
       /* background-image: linear-gradient(#000000a8,#000000a8), url('https://cdn.vectorstock.com/i/preview-1x/57/68/auto-hand-drawn-doodle-banner-cartoon-detailed-vector-28785768.jpg'); */
-      background-image: linear-gradient(#000000e2, #000000e2), url('https://static.vecteezy.com/system/resources/previews/005/447/461/large_2x/auto-parts-seamless-background-this-background-can-be-used-as-wallpapers-for-a-garage-car-service-or-as-a-fabric-print-vector.jpg');
+      /* background-image: linear-gradient(#000000e2, #000000e2), url('https://static.vecteezy.com/system/resources/previews/005/447/461/large_2x/auto-parts-seamless-background-this-background-can-be-used-as-wallpapers-for-a-garage-car-service-or-as-a-fabric-print-vector.jpg'); */
+      background-image: linear-gradient(#000000e2, #000000e2), url('assets/images/welcome/welcome.jpg'); 
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -191,7 +192,17 @@
                       left: 100%;
                     }
                   }
+                  .hero_section_image {
+                    position: relative;
+                    transform: translateX(10%);
+                  }
 
+                  .hero_section_image img {
+                    scale: 1.3;
+                    position: relative;
+                    bottom: 4.5rem;
+                    filter: drop-shadow(30px 20px 4px #0a0a0a);
+                  }
                   .btnContainer {
                     display: flex;
                     align-items: flex-start;
@@ -200,11 +211,22 @@
                     flex-direction: column;
                     transform: translate(0rem, 9%);
                   }
-
-                  @media screen and (max-width: 426px) {
+                  @media screen and (max-width: 430px) {
                     .btnContainer {
                       flex-direction: row;
-                      transform: translate(4%, 427%);
+                      transform: translate(0%, 427%);
+                      justify-content: center;
+                    }
+
+                    .hero_section_image img {
+                    scale: 1.3;
+                    position: relative;
+                    bottom: 1.5rem;
+                    filter: drop-shadow(30px 20px 4px #0a0a0a);
+                  }
+                    .hero_section_image{
+                      position: relative;
+                      transform: translate(58%,-7rem);
                     }
 
                     .hero_section_content .btn-secondary {
@@ -215,6 +237,76 @@
                     .hero_section_content{
                       position: relative;
                       top: -50%;
+                    }
+                    .hbutton{
+                      font-size: 14px;
+                    } 
+                  }
+                  @media screen and (max-width: 426px) {
+                    .btnContainer {
+                      flex-direction: row;
+                      transform: translate(0%, 427%);
+                    }
+
+                    .hero_section_image img {
+                    scale: 1.3;
+                    position: relative;
+                    bottom: 1.5rem;
+                    filter: drop-shadow(30px 20px 4px #0a0a0a);
+                  }
+                    .hero_section_image{
+                      position: relative;
+                      transform: translate(58%,-7rem);
+                    }
+
+                    .hero_section_content .btn-secondary {
+                      margin-top: 0.8rem;
+                      margin-left: 0rem;
+                    }
+
+                    .hero_section_content{
+                      position: relative;
+                      top: -50%;
+                    }
+                    .hbutton{
+                      font-size: 14px;
+                    } 
+                  }
+
+                  @media screen and (max-width: 372px) {
+                    .hero_section_content{
+                      top: -38%;
+                    }
+                    .hbutton{
+                      font-size: 16px;
+                    }     
+                    .hero_section_image img {
+                      bottom: 4.5rem;
+                  }            
+                  .btnContainer{
+                    transform: translate(0%, 390%);
+                  }   
+                  }
+                  @media screen and (max-width: 363px) {
+                    .hbutton{
+                      font-size: 15px;
+                    }    
+                    .hero_section_image img {
+                      bottom: 4.5rem;
+                  }        
+                  .btnContainer{
+                    transform: translate(0%, 390%);
+                  }   
+                  }
+
+                  @media screen and (max-width:321px){
+                    .hbutton{
+                      padding-block: 0.5rem;
+                      padding-inline: 0.9rem;
+                      font-size: 13px;
+                    }
+                    .hero_section .hero_title {
+                      font-size: 43px;
                     }
                   }
                 </style>
@@ -243,32 +335,6 @@
 
               <div class="hero_section_image"><img data-parallax='{"x" : -200, "smoothness": 8}'
                   src="assets/images/hero/hero-car-1.png" alt="Miracle Car Detailers – Car Service Image">
-                <style>
-                  .hero_section_image {
-                    position: relative;
-                    transform: translateX(10%);
-                  }
-
-                  .hero_section_image img {
-                    scale: 1.3;
-                    position: relative;
-                    bottom: 4.5rem;
-                    filter: drop-shadow(30px 20px 4px #0a0a0a);
-                  }
-
-                  @media (max-width:426px) {
-                    .hero_section_image img {
-                    scale: 1.3;
-                    position: relative;
-                    bottom: 1.5rem;
-                    filter: drop-shadow(30px 20px 4px #0a0a0a);
-                  }
-                    .hero_section_image{
-                      position: relative;
-    transform: translate(58%,-7rem);
-                    }
-                  }
-                </style>
               </div>
             </div>
           </div>
