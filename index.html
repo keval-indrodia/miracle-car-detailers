@@ -38,6 +38,8 @@
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
   <link rel="stylesheet" href="assets/css/welcome.css">
   <script src="assets/js/welcome.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -290,7 +292,7 @@
             </div>
           </div>
         </div>
-        <div class="carousel_4col" data-slick="{'dots': false, 'autoplay': false}">
+        <div class="carousel_4coldemo">
           <div class="carousel_item">
             <div class="service_item">
               <div class="serial_number outline_text">01</div>
@@ -361,20 +363,29 @@
           </div>
         </div>
         <style>
-          .carousel_4coldemo{
+          .carousel_4coldemo {
             display: grid;
-            grid-template-columns: repeat(4,1fr);
+            grid-template-columns: repeat(4, 1fr);
             grid-template-rows: 1fr;
           }
+        
           @media screen and (max-width: 426px) {
-            .carousel_4coldemo{
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto;
-          }
+            .carousel_4coldemo {
+              overflow-x: auto;
+              display: flex;
+              flex-direction: row;
+              scroll-snap-type: x mandatory;
+            }
+        
+            .carousel_item {
+              flex: 0 0 auto;
+              width: 100%;
+              scroll-snap-align: start;
+            }
           }
         </style>
-        <div class="carousel_4col" data-slick="{'dots': false, 'autoplay': false}">
+        
+        <div class="carousel_4coldemo">
           <div class="carousel_item">
             <div class="service_item">
               <div class="serial_number outline_text">05</div>
@@ -1543,8 +1554,9 @@ observer.observe();
   </script>
   <script src="assets/js/splitting.min.js">
   </script>
-  <script src="assets/js/slick.min.js">
-  </script>
+  <!-- <script src="assets/js/slick.min.js">
+  </script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="assets/js/magnific-popup.min.js">
   </script>
   <script src="assets/js/appear.js">
