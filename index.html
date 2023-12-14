@@ -1564,37 +1564,40 @@
           </p>
         </div>
       </div>
-    </footer>s
+    </footer>
   </div>
   <script>
     // Get the elements
-    const servicesSection = document.querySelector('.service_section');
+    const heroSection = document.querySelector('.hero_section');
     const customNav = document.querySelector('.customNav');
-
+  
     // Check if elements are found
-    if (servicesSection && customNav) {
+    if (heroSection && customNav) {
       // Set up the Intersection Observer
       const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // The services_section is intersecting with the customNav
-            // customNav.style.visibility = 'visible';
-            customNav.style.opacity = 1;
-          } else {
-            // The services_section is not intersecting with the customNav
-            // customNav.style.visibility = 'hidden';
+        const heroEntry = entries.find(entry => entry.target === heroSection);
+  
+        if (heroEntry) {
+          // Check if the hero_section is in the viewport
+          if (heroEntry.isIntersecting) {
+            // The hero_section is in the viewport, hide the customNav
             customNav.style.opacity = 0;
+          } else {
+            // The hero_section is not in the viewport, show the customNav
+            customNav.style.opacity = 1;
           }
-        });
-      }, { threshold: 0.5 }); // Adjust the threshold as needed
-
-      // Start observing the services_section
-      observer.observe(servicesSection);
+        }
+      }, { threshold: 0 });
+  
+      // Start observing the hero_section
+      observer.observe(heroSection);
     } else {
-      console.error("Couldn't find elements: servicesSection or customNav");
+      console.error("Couldn't find elements: heroSection or customNav");
     }
-
   </script>
+  
+  
+  
   <script src="assets/js/jquery.min.js">
   </script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
