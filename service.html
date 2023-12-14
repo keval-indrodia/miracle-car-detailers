@@ -25,7 +25,7 @@
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <link rel="stylesheet" href="css/welcome.css">
   <script src="js/welcome.js"></script>
-  <style>
+  <!-- <style>
     body{
       overflow-x: hidden;
     }
@@ -113,7 +113,78 @@
     .card h6{
       font-size: 1rem;
     }
-  </style>
+  </style> -->
+  <style>
+    body{
+      overflow-x: hidden;
+    }
+    .card1{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.7fr;
+        /* height: 400px; */
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    }
+    .header-text1 {
+      position: relative;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      font-size: 18px;
+      bottom: 2rem;
+    }
+    .header-text1::after{
+        content: '';
+        position: absolute;
+        top: 2rem;
+        background: var(--bs-primary);
+        height: 2px;
+        width: 50%;
+    }
+    .card-header1 .img-container img{
+        max-width: 100%;
+        object-fit: cover;
+        height: 200px;
+        -webkit-mask-image: linear-gradient(black, transparent);
+            mask-image: linear-gradient(black, transparent);
+    }
+    .card-body1{
+        position: relative;
+        background: linear-gradient(360deg, #0b0202 80%, transparent 100%);
+        /* background: #0b0202; */
+        
+    }
+    .card1:hover .card-body1{
+    background: linear-gradient(360deg, rgba(138, 0, 0, 0) 80%, transparent 100%);
+    transition: 0.3s ease-in-out;
+    }
+    .card-body1::after{
+        content: '';
+    position: absolute;
+    z-index: -1;
+    display: inline-block;
+    height: 280px;
+    width: 300px;
+    background: linear-gradient(360deg, #8a000000, transparent);
+    top: -7rem;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    border-radius: 10px;
+    }
+    .card1:hover .card-body1::after{
+    opacity: 1;
+    background: linear-gradient(360deg, #8a0000, transparent);
+    transition: 0.3s ease-in-out;
+    }
+
+    .card-body1 p{
+        padding: 10px;
+    margin: 1rem;
+    }
+</style>
 </head>
 
 <body>
@@ -137,210 +208,210 @@
           </div>
           <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://images.pexels.com/photos/1003849/pexels-photo-1003849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>Headlight Polishing</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Improve visibility and aesthetics with our headlight polishing service, ensuring a clear and sleek appearance.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://images.pexels.com/photos/2027045/pexels-photo-2027045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>ENGINE DRESSING</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Enhance your engine's appearance with our professional dressing service, adding a polished touch under the hood.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://images.pexels.com/photos/6872572/pexels-photo-6872572.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>DECONTAMINATION & SURFACE</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Achieve a clean and prepared surface with our exterior decontamination, ensuring optimal treatment results.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://images.pexels.com/photos/4665707/pexels-photo-4665707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>COMPOUNDING & FINISHING</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Perfect your car's finish with our compounding and finishing treatment, delivering a flawless exterior.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://images.pexels.com/photos/5233262/pexels-photo-5233262.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>SANDING</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Address imperfections professionally with our sanding service, ensuring a smooth and refined exterior surface.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://images.pexels.com/photos/6026083/pexels-photo-6026083.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>REFINEMENT</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Elevate your car's appearance with our refinement service, adding a polished touch to every detail.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://images.pexels.com/photos/10123980/pexels-photo-10123980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>ALLOY WHEEL POLISHING</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Unleash brilliance on your wheels with our alloy wheel polishing, ensuring a captivating and polished look.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://images.pexels.com/photos/5233261/pexels-photo-5233261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>CERAMIC WAX</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Protect and enhance your car's finish with our ceramic wax treatment, providing lasting shine and durability.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://images.pexels.com/photos/2922140/pexels-photo-2922140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>TYRE DRESSING</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Achieve a sleek and polished look for your tires with our professional dressing service, ensuring a lasting impression.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://images.pexels.com/photos/6044794/pexels-photo-6044794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>Headlight Polishing</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Improve visibility and aesthetics with our headlight polishing service, ensuring a clear and sleek appearance.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://images.pexels.com/photos/10978994/pexels-photo-10978994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>RUBBER DRESSINGS</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Preserve and protect rubber parts professionally, enhancing the overall appearance and longevity of your vehicle.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://images.pexels.com/photos/372810/pexels-photo-372810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>PREMIUM WASH
                     </h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Experience excellence with our precision-focused premium wash, leaving your vehicle gleaming with renewed brilliance.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://images.pexels.com/photos/6941478/pexels-photo-6941478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>CLAY WASH</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Experience a deep, reflective shine that enhances the natural color of your car. Our Clay Wash brings out the true brilliance of your vehicle's paint</p>
                 </div>
               </div>
@@ -354,161 +425,161 @@
           </div>
           <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://images.pexels.com/photos/4218867/pexels-photo-4218867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>INTENSIVE INTERIOR CLEANING</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Immerse in luxury with our thorough interior cleaning, ensuring a pristine, comfortable driving experience.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://www.oldcarsweekly.com/review/wp-content/uploads/2022/07/car-vacuum-old-cars-weekly.jpeg" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>VACUUMING</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Elevate cleanliness through meticulous vacuuming, leaving your car spotless for a refined driving experience.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://www.autodeal.com.ph/custom/blog-post/header/is-steam-cleaning-good-for-your-car-6130a06ee4559.jpg" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>STEAM CLEANING</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Refresh your car's interior with our deep steam cleaning, effectively removing stubborn stains and odors.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://www.prestigeperfection.com.au/wp-content/uploads/2023/09/custom-mats1.jpg" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>BOOTSPACE CLEANING</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Extend the care to your bootspace, ensuring a comprehensive cleaning experience inside your vehicle.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://images.pexels.com/photos/1030766/pexels-photo-1030766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>LEATHER CONDITIONING</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Preserve the integrity of your leather with our conditioning treatment, maintaining suppleness for a sophisticated ride.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://i.insider.com/57112c3edd0895bc4f8b49ad?width=1200&format=jpeg" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>OZONE AIR PURIFICATION</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Create a germ-free, odor-free interior with our ozone air purification, ensuring a healthy driving environment.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://www.pranaair.com/wp-content/uploads/2019/07/car-air-purifier-1.jpg" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>AIR FRESHENING</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Enjoy a delightful atmosphere with our air freshening service, leaving your car with a pleasant and lasting fragrance.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://images.pexels.com/photos/2186257/pexels-photo-2186257.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>AC VENTS / SANITIZATION</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Ensure fresh, sanitized air with our AC vent cleaning service, enhancing in-car air quality.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://www.carscoops.com/wp-content/uploads/2015/07/613fbb83-ferrari-1.jpg" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>RUBBER / PLASTIC</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Restore and protect rubber/plastic parts, ensuring longevity and a polished appearance for your vehicle.</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="card">
+              <div class="card1">
                 <div class="card-header1">
-                  <div class="image-container">
+                  <div class="img-container">
                     <img src="https://images.unsplash.com/photo-1694889648924-b6f624dbc61c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image" class="card-img">
                     <div class="fading-effect"></div>
                   </div>
-                  <div class="header-text">
+                  <div class="header-text1">
                     <h6>DASH BOARD</h6>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body1">
                   <p>Revitalize your dashboard with our specialized treatment, restoring its original luster and appeal.</p>
                 </div>
               </div>
