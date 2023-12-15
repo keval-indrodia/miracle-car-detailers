@@ -21,17 +21,17 @@
 
   <!-- <link rel="stylesheet" type="text/css" href="assets/css/animate.css"> -->
 
-  <link rel="stylesheet" type="text/css" href="assets/css/cursor.css">
+  <!-- <link rel="stylesheet" type="text/css" href="assets/css/cursor.css"> -->
 
   <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
 
   <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
 
-  <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
 
-  <link rel="stylesheet" type="text/css" href="assets/css/vanilla-calendar.min.css">
+ <link rel="stylesheet" type="text/css" href="assets/css/vanilla-calendar.min.css">
 
-  <link rel="stylesheet" type="text/css" href="assets/css/odometer.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/odometer.css"> 
 
   <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.css">
 
@@ -115,11 +115,19 @@
             <div class="col-lg-6">
 
               <div class="hero_section_content">
-                <h1 class="hero_title wow" data-splitting>Keep your car looking New</h1>
+                <h1 class="hero_title wow hero_heading" data-splitting>Keep your car looking New</h1>
 
                 <p>Advanced Technology. Poweful Performance. Premium Finish</p>
 
                 <style>
+                  .hero-heading {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+    background: linear-gradient(to right, #FF4949, #FFFFFF); /* Match the gradient of the background */
+    -webkit-background-clip: text;
+    color: transparent;
+}
                   .hbutton {
                     position: relative;
                     transition: all 0.3s ease-in-out;
@@ -990,19 +998,19 @@
           </div>
           <div class="row">
             <div class="col-lg-6">
-              <div class="image_before_after"><img class="lozad" data-src="assets/images/portfolio/portfolio_img_5.jpg"
+              <div class="image_before_after"><img src="assets/images/portfolio/portfolio_img_5.jpg"
                   alt="Miracle Car Detailers - Car Repair Service">
 
-                <img class="lozad" data-src="assets/images/portfolio/portfolio_img_6.jpg" alt="Miracle Car Detailers - Car Repair Service">
+                <img src="assets/images/portfolio/portfolio_img_6.jpg" alt="Miracle Car Detailers - Car Repair Service">
 
               </div>
               <!-- <span class="img_label">Before</span>
               <span class="img_label">After</span> -->
             </div>
             <div class="col-lg-6">
-              <div class="image_before_after"><img class="lozad" data-src="assets/images/portfolio/portfolio_img_7.jpg"
+              <div class="image_before_after"><img src="assets/images/portfolio/portfolio_img_7.jpg"
                   alt="Miracle Car Detailers - Car Repair Service"> <img
-                  class="lozad" data-src="assets/images/portfolio/portfolio_img_8.jpg" alt="Miracle Car Detailers - Car Repair Service">
+                  src="assets/images/portfolio/portfolio_img_8.jpg" alt="Miracle Car Detailers - Car Repair Service">
               </div>
             </div>
           </div>
@@ -1627,7 +1635,10 @@
     }
   </script>
   
-  
+  <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+  </script>
+  <script defer src="/node_modules/@vercel/speed-insights/dist/index.js"></script>
   
   <script src="assets/js/jquery.min.js">
   </script>
