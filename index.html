@@ -997,20 +997,20 @@
             <h2 class="heading_text mb-0 wow" data-splitting>Gallery</h2>
           </div>
           <div class="row">
-            <div class="col-lg-6">
-              <div class="image_before_after"><img src="assets/images/portfolio/portfolio_img_5.jpg"
-                  alt="Miracle Car Detailers - Car Repair Service">
+              <div class="col-lg-6">
+                <div class="image_before_after"><img src="assets/images/portfolio/portfolio_img_5.jpg"
+                    alt="Miracle Car Detailers - Car Repair Service">
 
-                <img src="assets/images/portfolio/portfolio_img_6.jpg" alt="Miracle Car Detailers - Car Repair Service">
+                  <img src="assets/images/portfolio/portfolio_img_6.jpg" alt="Miracle Car Detailers - Car Repair Service">
 
+                </div>
+                <!-- <span class="img_label">Before</span>
+                <span class="img_label">After</span> -->
               </div>
-              <!-- <span class="img_label">Before</span>
-              <span class="img_label">After</span> -->
-            </div>
             <div class="col-lg-6">
               <div class="image_before_after"><img src="assets/images/portfolio/portfolio_img_7.jpg"
                   alt="Miracle Car Detailers - Car Repair Service"> <img
-                  src="assets/images/portfolio/portfolio_img_8.jpg" alt="Miracle Car Detailers - Car Repair Service">
+                 src="assets/images/portfolio/portfolio_img_8.jpg" alt="Miracle Car Detailers - Car Repair Service">
               </div>
             </div>
           </div>
@@ -1345,7 +1345,7 @@
                   <label for="input_name">Your Name
                   </label>
                   <input type="text" name="name" class="form-control" id="input_name" placeholder="Enter Your Name"
-                    required>
+                    required autocomplete="on">
                 </div>
               </div>
 
@@ -1355,7 +1355,7 @@
                   <label for="input_phone">Your Phone
                   </label>
                   <input type="tel" name="phone" class="form-control" id="input_phone" placeholder="Enter Your Phone"
-                    required>
+                    required autocomplete="on">
                 </div>
               </div>
 
@@ -1481,7 +1481,7 @@
                     <div class="contact_info_box">
                       <h3 class="item_title">Address</h3>
                       <ul class="info_list unordered_list_block pe-lg-2">
-                        <li><span class="info_text mb-3">Satyam Complex, B/h. Perfect Hero Show-Room, Gondal Road,
+                        <li><span class="info_text mb-3">Miracle House, B/h. Perfect Hero Show-Room, Gondal Road,
                             Nr. Gondal Chowkadi, Rajkot-360 004.
                           </span></li>
                       </ul>
@@ -1635,18 +1635,13 @@
     }
   </script>
   
-  <script>
-    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-  </script>
-  <script defer src="/node_modules/@vercel/speed-insights/dist/index.js"></script>
-  
   <script src="assets/js/jquery.min.js">
   </script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
-  <script>
+  <!-- <script>
     const observer = lozad(); // lazy loads elements with default selector as '.lozad'
 observer.observe();
-  </script>
+  </script> -->
   <script src="assets/js/popper.min.js">
   </script>
   <script src="assets/js/bootstrap.min.js">
@@ -1686,6 +1681,39 @@ observer.observe();
   </script>
   <script src="assets/js/main.js">
   </script>
+  <script>
+    // Assuming you have already included the lozad.js library
+  
+    // Initialize lozad
+    const observer = lozad('.lozad', {
+      loaded: function (el) {
+        // Custom callback after an image has been loaded
+        el.classList.add('lozad-loaded');
+      }
+    });
+  
+    // Apply the beforeAfter plugin
+    jQuery('.image_before_after').beforeAfter({
+      movable: true,
+      clickMove: true,
+      alwaysShow: true,
+      position: 50,
+      opacity: 0.8,
+      hoverOpacity: 1,
+      activeOpacity: 1,
+      separatorColor: "#af0614",
+      bulletColor: "#af0614",
+      arrowColor: "#FFFFFF",
+      onMoveEnd: function () {
+        // Manually trigger lozad after applying beforeAfter
+        observer.observe();
+      }
+    });
+  
+    // Start observing
+    observer.observe();
+  </script>
+  
 </body>
 
 

@@ -1,11 +1,3 @@
-// ==================================================
-// * Project Name   :  ProMotors – Car Service & Detailing Template
-// * File           :  JS Base
-// * Version        :  1.0.0
-// * Last change    :  06 July 2023, Thursday
-// * Author         :  Merkulove (https://1.envato.market/tf-merkulove)
-// ==================================================
-
 (function($) {
   "use strict";
 
