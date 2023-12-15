@@ -15,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/fontawesome.css">
   <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/cursor.css">
+  <!-- <link rel="stylesheet" type="text/css" href="assets/css/cursor.css"> -->
   <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
   <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
   <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
@@ -25,9 +25,179 @@
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <link rel="stylesheet" href="css/welcome.css">
   <script src="js/welcome.js"></script>
+  <!-- <style>
+    body{
+      overflow-x: hidden;
+    }
+    .card {
+      width: 300px;
+      margin: 50px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .card-header1 {
+      position: relative;
+    }
+
+    .image-container {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      height: 77%;
+      object-fit: cover;
+    }
+
+    .card-img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            -webkit-mask-image: linear-gradient(black, transparent);
+            mask-image: linear-gradient(black, transparent); 
+            
+        }
+/* 
+    .fading-effect {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0,0,0,1));
+    } */
+
+    .header-text {
+      position: relative;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      font-size: 18px;
+      bottom: 2rem;
+    }
+
+    .header-text::after{
+        content: '';
+        position: absolute;
+        top: 2rem;
+        background: var(--bs-primary);
+        height: 2px;
+        width: 50%;
+    }
+
+    .card-body {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(360deg, #0b0202, transparent);
+    padding: 2.5rem 20px 20px 20px;
+    box-sizing: border-box;
+    color: white;
+    transition: 0.3s ease-in-out;
+    }
+
+   .card:hover .card-body {
+    background: linear-gradient(360deg, #8a0000, transparent);
+    transition: 0.3s ease-in-out;
+    }
+
+    .card-body p {
+      margin: 0;
+    }
+
+    .card h6{
+      font-size: 1rem;
+    }
+  </style> -->
+  <style>
+    body{
+      overflow-x: hidden;
+    }
+    .card1{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.7fr;
+        /* height: 400px; */
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    }
+    .header-text1 {
+      position: relative;
+      bottom: 20px;
+      left: 20px;
+      top: 2px;
+      color: white;
+      font-size: 18px;
+      bottom: 2rem;
+    }
+    .header-text1::after{
+        content: '';
+        position: absolute;
+        top: 2rem;
+        background: var(--bs-primary);
+        height: 2px;
+        width: 50%;
+        transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .card-header1 .img-container img{
+        max-width: 100%;
+        object-fit: cover;
+        height: 200px;
+        -webkit-mask-image: linear-gradient(black, transparent);
+            mask-image: linear-gradient(black, transparent);
+    }
+    .card-body1{
+        position: relative;
+        background: linear-gradient(360deg, #0b0202 40%, transparent 100%);
+        /* background: #0b0202; */
+        
+    }
+    .card1:hover .card-body1{
+    background: linear-gradient(360deg, rgba(138, 0, 0, 0) 80%, transparent 100%);
+    transition: 0.3s ease-in-out;
+    }
+    .card-body1::after{
+        content: '';
+    position: absolute;
+    z-index: -1;
+    display: inline-block;
+    height: 280px;
+    width: 300px;
+    background: linear-gradient(360deg, #8a000000, transparent);
+    top: -7rem;
+    opacity: 0;
+    transition: 0.3s ease-out;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-radius: 10px;
+    }
+    .card1:hover .card-body1::after{
+    opacity: 1;
+    background: linear-gradient(360deg, #8a0000, transparent);
+    background: linear-gradient(180deg, transparent 0%, var(--bs-primary) 100%);
+    /* transition: 0.3s ease-in; */
+    }
+
+    .card1:hover .card-header1 .header-text1::after{
+      background-color: #dd0012;
+      background-color: #e11728;
+    }
+
+    .card-body1 p{
+        padding: 10px;
+    margin: 1rem;
+    }
+</style>
 </head>
 
 <body>
+
   <div class="page_wrapper">
     <div class="backtotop"><a href="#" class="scroll"><i class="fa-solid fa-arrow-up"></i></a></div>
     <main class="page_content">
@@ -43,211 +213,215 @@
       <section class="service_section section_space_lg">
         <div class="container">
           <div class="section_heading">
-            <h2 class="heading_text mb-0 wow" data-splitting>Outside Services</h2>
+            <h2 class="heading_text mb-0 wow" data-splitting>Exterior Services</h2>
           </div>
           <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .duotone_een{fill:#ffffff;} .duotone_twee{fill:#ffffff;} </style> <g> <g> <g> <path class="duotone_een" d="M16.294,11c-0.236,0-0.404-0.144-0.441-0.332c-0.336-1.705-3.307-1.633-4.483-1.699 C11.106,8.954,11,8.778,11,8.563V7.311C11,7.087,11.033,7,11.311,7h9.161c0.231,0,0.432,0.082,0.488,0.264l0.985,2.186 c0.076,0.246-0.145,0.497-0.458,0.51c-1.182,0.05-2.048,0.67-2.36,0.929C19.037,10.962,18.929,11,18.812,11H16.294z M11.026,22 c0.05,2.301,0.285,4.677,0.382,5.576C11.432,27.792,11.648,28,11.907,28h8.341c0.264,0,0.483-0.181,0.5-0.402 c0.067-0.879,0.219-3.095,0.233-5.598H11.026z"></path> </g> <g> <path class="duotone_een" d="M16.294,11c-0.236,0-0.404-0.144-0.441-0.332c-0.336-1.705-3.307-1.633-4.483-1.699 C11.106,8.954,11,8.778,11,8.563V7.311C11,7.087,11.033,7,11.311,7h9.161c0.231,0,0.432,0.082,0.488,0.264l0.985,2.186 c0.076,0.246-0.145,0.497-0.458,0.51c-1.182,0.05-2.048,0.67-2.36,0.929C19.037,10.962,18.929,11,18.812,11H16.294z M11.026,22 c0.05,2.301,0.285,4.677,0.382,5.576C11.432,27.792,11.648,28,11.907,28h8.341c0.264,0,0.483-0.181,0.5-0.402 c0.067-0.879,0.219-3.095,0.233-5.598H11.026z"></path> </g> </g> <path class="duotone_twee" d="M20.979,21c-0.039-3.642-0.421-7.596-1.801-8.877C19.087,12.038,18.962,12,18.837,12h-2.376 c-0.227,0-0.431,0.099-0.483,0.284c-0.954,3.391-3.788,3.272-4.527,5.078c-0.314,0.768-0.426,2.136-0.434,3.638H20.979z"></path> </g> </g></svg>  
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://images.pexels.com/photos/1003849/pexels-photo-1003849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>Headlight Polishing</h6>
+                  </div>
                 </div>
-                <div class="item_content">
-                  <h3 class="item_title">Decontamination & Surface</h3>
-                  <p>Achieve a clean and prepared surface with our exterior decontamination, ensuring optimal treatment results.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span
-                      class="btn_icon"><i class="fa-regular fa-angle-right"></i></span> <span
-                      class="btn_text"><small>Details Service</small> <small>Details Service</small></span></a> -->
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  <svg width="25" height="52" viewBox="0 0 25 52" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M14.521 20.2881L11.6342 36.9322H3.06641L7.94341 20.2881H14.521Z" fill="#EDEDED" />
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.43709H24.1346V0H0V6.43709Z" fill="#EDEDED" />
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.6744H24.1346V8.19287H0V10.6744Z"
-                      fill="#EDEDED" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M12.1333 18.1352C11.0407 18.1352 10.144 17.2606 10.1202 16.168V16.1212C10.1202 15.0056 11.0254 14.1081 12.1333 14.1081C13.2489 14.1081 14.155 15.0056 14.155 16.1212C14.155 16.4729 14.0604 16.8084 13.9046 17.0963C13.5538 17.7205 12.898 18.1352 12.1333 18.1352ZM0 12.439V23.799H6.04707L6.98381 20.2956C6.98381 19.8596 7.28782 19.5079 7.68551 19.5079H16.4721C16.8621 19.5079 17.1747 19.8596 17.1747 20.2956L18.2272 23.799H24.1346V12.439H0Z"
-                      fill="#EDEDED" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M6.75729 49.5814C3.85425 49.5814 1.49027 47.225 1.49027 44.3143C1.49027 41.4036 3.85425 39.0465 6.75729 39.0465C9.66799 39.0465 12.0243 41.4036 12.0243 44.3143C12.0243 47.225 9.66799 49.5814 6.75729 49.5814ZM0 51.2351H13.5222V37.7129H0V51.2351Z"
-                      fill="#EDEDED" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M6.74684 47.6261C5.13991 47.6261 3.79015 46.4637 3.50062 44.9342H2.07422C2.37057 47.2437 4.3522 49.0312 6.74684 49.0312C9.14319 49.0312 11.1257 47.2437 11.422 44.9342H9.99306C9.70523 46.4637 8.35547 47.6261 6.74684 47.6261ZM6.74684 41.0016C8.35547 41.0016 9.70523 42.1564 9.99306 43.6867H11.422C11.1257 41.3763 9.14319 39.5889 6.74684 39.5889C4.3522 39.5889 2.37057 41.3763 2.07422 43.6867H3.50062C3.79015 42.1564 5.13991 41.0016 6.74684 41.0016Z"
-                      fill="#EDEDED" />
-                  </svg>
-                </div>
-                <div class="item_content">
-                  <h3 class="item_title">Engine Dressing</h3>
-                  <p>Enhance your engine's appearance with our professional dressing service, adding a polished touch under the hood.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span
-                      class="btn_icon"><i class="fa-regular fa-angle-right"></i></span> <span
-                      class="btn_text"><small>Details Service</small> <small>Details Service</small></span></a> -->
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  <img src="assets/images/icons/headlight.png" alt="">
-                </div>
-                <div class="item_content">
-                  <h3 class="item_title">Headlight Polishing</h3>
+                <div class="card-body1">
                   <p>Improve visibility and aesthetics with our headlight polishing service, ensuring a clear and sleek appearance.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span class="btn_icon"><i
-                        class="fa-regular fa-angle-right"></i></span> <span class="btn_text"><small>Details
-                        Service</small> <small>Details Service</small></span></a> -->
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon"><svg width="36" height="53" viewBox="0 0 36 53" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M21.7153 24.3511L20.7189 12.0969L30.2311 24.019L30.7591 24.6824L21.7153 24.3511ZM5.28831 47.2245H29.916V29.2392H5.28831V47.2245ZM35.4002 24.6824L35.2895 24.5461L35.2639 24.5214L20.5146 6.64674L20.1058 6.15283C19.8163 5.89735 19.4331 5.75258 19.0158 5.75258H13.9063V4.50928H5.96106V5.75258H1.70316C0.766422 5.75258 0 6.51049 0 7.45574V51.0217C0 51.9678 0.766422 52.7249 1.70316 52.7249H34.0632C34.9999 52.7249 35.7664 51.9678 35.7664 51.0217V25.7221C35.7664 25.321 35.6301 24.9634 35.4002 24.6824Z"
-                      fill="#EDEDED" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M20.5149 6.64589L20.1062 6.15198C20.2773 6.28738 20.4136 6.45855 20.5149 6.64589Z"
-                      fill="#EDEDED" />
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.28809 3.65498H14.5848V0H5.28809V3.65498Z"
-                      fill="#EDEDED" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M17.0482 43.3239C16.7586 43.7157 16.1881 43.3665 15.8474 43.1792C15.4387 42.9578 14.6467 42.3105 14.7148 41.7485C14.834 40.9565 15.626 41.493 16.0774 41.8669C16.6735 42.4127 17.1759 43.1621 17.0482 43.3239ZM21.4168 38.1625L21.3486 38.0612L17.8912 31.8872L14.2294 38.3933C13.8888 38.9894 13.71 39.6792 13.71 40.4115C13.71 42.7185 15.5834 44.5758 17.8912 44.5758C20.199 44.5758 22.064 42.7185 22.064 40.4115C22.064 39.5846 21.8255 38.8097 21.4168 38.1625Z"
-                      fill="#EDEDED" />
-                  </svg></div>
-                <div class="item_content">
-                  <h3 class="item_title">Compounding & Finishing</h3>
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://images.pexels.com/photos/2027045/pexels-photo-2027045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>ENGINE DRESSING</h6>
+                  </div>
+                </div>
+                <div class="card-body1">
+                  <p>Enhance your engine's appearance with our professional dressing service, adding a polished touch under the hood.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://images.pexels.com/photos/6872572/pexels-photo-6872572.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>DECONTAMINATION & SURFACE</h6>
+                  </div>
+                </div>
+                <div class="card-body1">
+                  <p>Achieve a clean and prepared surface with our exterior decontamination, ensuring optimal treatment results.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://images.pexels.com/photos/4665707/pexels-photo-4665707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>COMPOUNDING & FINISHING</h6>
+                  </div>
+                </div>
+                <div class="card-body1">
                   <p>Perfect your car's finish with our compounding and finishing treatment, delivering a flawless exterior.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span class="btn_icon"><i
-                        class="fa-regular fa-angle-right"></i></span> <span class="btn_text"><small>Details
-                        Service</small> <small>Details Service</small></span></a> -->
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  <img src="assets/images/icons/sanding.png" alt="">
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://images.pexels.com/photos/5233262/pexels-photo-5233262.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>SANDING</h6>
+                  </div>
                 </div>
-                <div class="item_content">
-                  <h3 class="item_title">Sanding</h3>
+                <div class="card-body1">
                   <p>Address imperfections professionally with our sanding service, ensuring a smooth and refined exterior surface.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span
-                      class="btn_icon"><i class="fa-regular fa-angle-right"></i></span> <span
-                      class="btn_text"><small>Details Service</small> <small>Details Service</small></span></a> -->
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon"><svg width="58" height="21" viewBox="0 0 58 21" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M46.9994 8.61544V11.8336H33.3605C32.7074 13.6304 30.9965 14.9052 28.9749 14.9052C26.9609 14.9052 25.2501 13.6304 24.5969 11.8336H10.958V8.61544H24.5893C25.0483 7.34658 26.0438 6.34427 27.3032 5.86143V3.60644H26.4712V2.10596H31.4785V3.60644H30.6551V5.86143C31.9137 6.34427 32.91 7.3551 33.3682 8.61544H46.9994Z"
-                      fill="#EDEDED" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M57.1381 2.83747L54.4292 3.79123V1.87944L57.1381 0.926519V2.83747ZM57.1381 5.31727L54.4292 6.27189V4.36435L57.1381 3.41058V5.31727ZM57.1381 7.80303L54.4292 8.7568V6.84841L57.1381 5.89123V7.80303ZM57.1381 10.2828L54.4292 11.2375V9.32906L57.1381 8.37614V10.2828ZM57.1381 12.7677L54.4292 13.7224V11.814L57.1381 10.8594V12.7677ZM57.1381 15.2492L54.4292 16.2064V14.2946L57.1381 13.3409V15.2492ZM57.1381 17.7333L54.4292 18.6871V16.7795L57.1381 15.8249V17.7333ZM57.1381 19.6689H54.4292V19.2636L57.1381 18.3056V19.6689ZM53.2659 19.6689H53.897V0.388321H53.2659V19.6689ZM52.1964 19.6689H52.8223V0.388321H52.1964V19.6689ZM48.951 19.6689V18.3056L51.6607 19.2636V19.6689H48.951ZM48.951 15.8249L51.6607 16.7795V18.6871L48.951 17.7333V15.8249ZM48.951 13.3409L51.6607 14.2946V16.2064L48.951 15.2492V13.3409ZM48.951 10.8594L51.6607 11.814V13.7224L48.951 12.7677V10.8594ZM48.951 8.37614L51.6607 9.32906V11.2375L48.951 10.2828V8.37614ZM48.951 5.89123L51.6607 6.84841V8.7568L48.951 7.80303V5.89123ZM48.951 3.41058L51.6607 4.36435V6.27189L48.951 5.31727V3.41058ZM48.951 0.926519L51.6607 1.87944V3.79123L48.951 2.83747V0.926519ZM48.951 0.353406L49.0549 0.388321H51.6607V1.30632L49.0549 0.388321H48.951V0.353406ZM54.4292 0.388321H57.0342L57.1262 0.356812V0.388321H57.0342L54.4292 1.30632V0.388321ZM57.3774 0.0212895C57.3263 0.00766422 57.2743 0 57.2232 0H57.1262V0.01618C57.0819 0.00766422 57.0342 0 56.9822 0H48.8982C48.5056 0 48.1846 0.321046 48.1846 0.717031V19.4203C48.1846 19.8171 48.5056 20.1339 48.8982 20.1339H57.2232C57.2743 20.1339 57.3263 20.1297 57.3774 20.1177C57.695 20.0453 57.936 19.7643 57.936 19.4203V0.717031C57.936 0.372992 57.695 0.0885643 57.3774 0.0212895Z"
-                      fill="#EDEDED" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M8.95266 2.83747L6.24379 3.79123V1.87944L8.95266 0.926519V2.83747ZM8.95266 5.31727L6.24379 6.27189V4.36435L8.95266 3.41058V5.31727ZM8.95266 7.80303L6.24379 8.7568V6.84841L8.95266 5.89123V7.80303ZM8.95266 10.2828L6.24379 11.2375V9.32906L8.95266 8.37614V10.2828ZM8.95266 12.7677L6.24379 13.7224V11.814L8.95266 10.8594V12.7677ZM8.95266 15.2492L6.24379 16.2064V14.2946L8.95266 13.3409V15.2492ZM8.95266 17.7333L6.24379 18.6871V16.7795L8.95266 15.8249V17.7333ZM8.95266 19.6689H6.24379V19.2636L8.95266 18.3056V19.6689ZM5.08053 19.6689H5.7107V0.388321H5.08053V19.6689ZM4.01094 19.6689H4.636V0.388321H4.01094V19.6689ZM0.764719 19.6689V18.3056L3.47445 19.2636V19.6689H0.764719ZM0.764719 15.8249L3.47445 16.7795V18.6871L0.764719 17.7333V15.8249ZM0.764719 13.3409L3.47445 14.2946V16.2064L0.764719 15.2492V13.3409ZM0.764719 10.8594L3.47445 11.814V13.7224L0.764719 12.7677V10.8594ZM0.764719 8.37614L3.47445 9.32906V11.2375L0.764719 10.2828V8.37614ZM0.764719 5.89123L3.47445 6.84841V8.7568L0.764719 7.80303V5.89123ZM0.764719 3.41058L3.47445 4.36435V6.27189L0.764719 5.31727V3.41058ZM0.764719 0.926519L3.47445 1.87944V3.79123L0.764719 2.83747V0.926519ZM0.764719 0.353406L0.869463 0.388321H3.47445V1.30632L0.869463 0.388321H0.764719V0.353406ZM6.24379 0.388321H8.84792L8.93989 0.356812V0.388321H8.84792L6.24379 1.30632V0.388321ZM9.19196 0.0212895C9.14086 0.00766422 9.08806 0 9.03697 0H8.93989V0.01618C8.89646 0.00766422 8.84792 0 8.79682 0H0.712773C0.320194 0 0 0.321046 0 0.717031V19.4203C0 19.8171 0.320194 20.1339 0.712773 20.1339H9.03697C9.08806 20.1339 9.14086 20.1297 9.19196 20.1177C9.50874 20.0453 9.74974 19.7643 9.74974 19.4203V0.717031C9.74974 0.372992 9.50874 0.0885643 9.19196 0.0212895Z"
-                      fill="#EDEDED" />
-                  </svg></div>
-                <div class="item_content">
-                  <h3 class="item_title">Refinement</h3>
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://images.pexels.com/photos/6026083/pexels-photo-6026083.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>REFINEMENT</h6>
+                  </div>
+                </div>
+                <div class="card-body1">
                   <p>Elevate your car's appearance with our refinement service, adding a polished touch to every detail.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span class="btn_icon"><i
-                        class="fa-regular fa-angle-right"></i></span> <span class="btn_text"><small>Details
-                        Service</small> <small>Details Service</small></span></a> -->
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  <img src="assets/images/icons/alloy-wheel.png" alt="">
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://images.pexels.com/photos/10123980/pexels-photo-10123980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>ALLOY WHEEL POLISHING</h6>
+                  </div>
                 </div>
-                <div class="item_content">
-                  <h3 class="item_title">Alloy Wheel Polishing</h3>
+                <div class="card-body1">
                   <p>Unleash brilliance on your wheels with our alloy wheel polishing, ensuring a captivating and polished look.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span class="btn_icon"><i
-                        class="fa-regular fa-angle-right"></i></span> <span class="btn_text"><small>Details
-                        Service</small> <small>Details Service</small></span></a> -->
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  <img src="assets/images/icons/car-wash.png" alt="">
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://images.pexels.com/photos/5233261/pexels-photo-5233261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>CERAMIC WAX</h6>
+                  </div>
                 </div>
-                <div class="item_content">
-                  <h3 class="item_title">Ceramic Wax</h3>
+                <div class="card-body1">
                   <p>Protect and enhance your car's finish with our ceramic wax treatment, providing lasting shine and durability.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span class="btn_icon"><i
-                        class="fa-regular fa-angle-right"></i></span> <span class="btn_text"><small>Details
-                        Service</small> <small>Details Service</small></span></a> -->
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  <img src="assets/images/icons/tyre.png" alt="">
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://images.pexels.com/photos/2922140/pexels-photo-2922140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>TYRE DRESSING</h6>
+                  </div>
                 </div>
-                <div class="item_content">
-                  <h3 class="item_title">Tyre Dressing</h3>
+                <div class="card-body1">
                   <p>Achieve a sleek and polished look for your tires with our professional dressing service, ensuring a lasting impression.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span class="btn_icon"><i
-                        class="fa-regular fa-angle-right"></i></span> <span class="btn_text"><small>Details
-                        Service</small> <small>Details Service</small></span></a> -->
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  <img src="assets/images/icons/rubberdressing.png" alt="">
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://images.pexels.com/photos/6044794/pexels-photo-6044794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>Headlight Polishing</h6>
+                  </div>
                 </div>
-                <div class="item_content">
-                  <h3 class="item_title">Rubber Dressings</h3>
+                <div class="card-body1">
+                  <p>Improve visibility and aesthetics with our headlight polishing service, ensuring a clear and sleek appearance.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://images.pexels.com/photos/10978994/pexels-photo-10978994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>RUBBER DRESSINGS</h6>
+                  </div>
+                </div>
+                <div class="card-body1">
                   <p>Preserve and protect rubber parts professionally, enhancing the overall appearance and longevity of your vehicle.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span class="btn_icon"><i
-                        class="fa-regular fa-angle-right"></i></span> <span class="btn_text"><small>Details
-                        Service</small> <small>Details Service</small></span></a> -->
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  <img src="assets/images/icons/car-wash.png" alt="">
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://images.pexels.com/photos/372810/pexels-photo-372810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>PREMIUM WASH
+                    </h6>
+                  </div>
                 </div>
-                <div class="item_content">
-                  <h3 class="item_title">Premium Wash</h3>
+                <div class="card-body1">
                   <p>Experience excellence with our precision-focused premium wash, leaving your vehicle gleaming with renewed brilliance.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span class="btn_icon"><i
-                        class="fa-regular fa-angle-right"></i></span> <span class="btn_text"><small>Details
-                        Service</small> <small>Details Service</small></span></a> -->
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  
-                  <img src="assets/images/icons/classywash.png" alt="">
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://images.pexels.com/photos/6941478/pexels-photo-6941478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>CLAY WASH</h6>
+                  </div>
                 </div>
-                <div class="item_content">
-                  <h3 class="item_title">Clay Wash</h3>
-                  <p>Indulge in sophistication with our classy wash service, ensuring a polished and refined appearance for your car.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span class="btn_icon"><i
-                        class="fa-regular fa-angle-right"></i></span> <span class="btn_text"><small>Details
-                        Service</small> <small>Details Service</small></span></a> -->
+                <div class="card-body1">
+                  <p>Experience a deep, reflective shine that enhances the natural color of your car. Our Clay Wash brings out the true brilliance of your vehicle's paint</p>
                 </div>
               </div>
             </div>
@@ -256,146 +430,166 @@
       <section class="service_section section_space_lg">
         <div class="container">
           <div class="section_heading">
-            <h2 class="heading_text mb-0 wow" data-splitting>Inside Services</h2>
+            <h2 class="heading_text mb-0 wow" data-splitting>Interior Services</h2>
           </div>
           <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  <img src="assets/images/icons/interior.png" alt="">
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://images.pexels.com/photos/4218867/pexels-photo-4218867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>INTENSIVE INTERIOR CLEANING</h6>
+                  </div>
                 </div>
-                <div class="item_content">
-                  <h3 class="item_title">Intensive Interior Cleaning</h3>
+                <div class="card-body1">
                   <p>Immerse in luxury with our thorough interior cleaning, ensuring a pristine, comfortable driving experience.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span
-                      class="btn_icon"><i class="fa-regular fa-angle-right"></i></span> <span
-                      class="btn_text"><small>Details Service</small> <small>Details Service</small></span></a> -->
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  <img src="assets/images/icons/vacuumm.png" alt="">
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://www.oldcarsweekly.com/review/wp-content/uploads/2022/07/car-vacuum-old-cars-weekly.jpeg" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>VACUUMING</h6>
+                  </div>
                 </div>
-                <div class="item_content">
-                  <h3 class="item_title">Vacuuming</h3>
+                <div class="card-body1">
                   <p>Elevate cleanliness through meticulous vacuuming, leaving your car spotless for a refined driving experience.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span
-                      class="btn_icon"><i class="fa-regular fa-angle-right"></i></span> <span
-                      class="btn_text"><small>Details Service</small> <small>Details Service</small></span></a> -->
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  <img src="assets/images/icons/steamer.png" alt="">
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://www.autodeal.com.ph/custom/blog-post/header/is-steam-cleaning-good-for-your-car-6130a06ee4559.jpg" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>STEAM CLEANING</h6>
+                  </div>
                 </div>
-                <div class="item_content">
-                  <h3 class="item_title">Steam Cleaning</h3>
+                <div class="card-body1">
                   <p>Refresh your car's interior with our deep steam cleaning, effectively removing stubborn stains and odors.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span
-                      class="btn_icon"><i class="fa-regular fa-angle-right"></i></span> <span
-                      class="btn_text"><small>Details Service</small> <small>Details Service</small></span></a> -->
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  
-                  <img src="assets/images/icons/car.png" alt=""></div>
-                <div class="item_content">
-                  <h3 class="item_title">Bootspace Cleaning</h3>
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://www.prestigeperfection.com.au/wp-content/uploads/2023/09/custom-mats1.jpg" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>BOOTSPACE CLEANING</h6>
+                  </div>
+                </div>
+                <div class="card-body1">
                   <p>Extend the care to your bootspace, ensuring a comprehensive cleaning experience inside your vehicle.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span
-                      class="btn_icon"><i class="fa-regular fa-angle-right"></i></span> <span
-                      class="btn_text"><small>Details Service</small> <small>Details Service</small></span></a> -->
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  <img src="assets/images/icons/leatherpolishing.png" alt="">
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://images.pexels.com/photos/1030766/pexels-photo-1030766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>LEATHER CONDITIONING</h6>
+                  </div>
                 </div>
-                <div class="item_content">
-                  <h3 class="item_title">Leather Conditioning</h3>
+                <div class="card-body1">
                   <p>Preserve the integrity of your leather with our conditioning treatment, maintaining suppleness for a sophisticated ride.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span
-                      class="btn_icon"><i class="fa-regular fa-angle-right"></i></span> <span
-                      class="btn_text"><small>Details Service</small> <small>Details Service</small></span></a> -->
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  <img src="assets/images/icons/ozone.png" alt="">
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://i.insider.com/57112c3edd0895bc4f8b49ad?width=1200&format=jpeg" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>OZONE AIR PURIFICATION</h6>
+                  </div>
                 </div>
-                <div class="item_content">
-                  <h3 class="item_title">Ozone Air Purification</h3>
+                <div class="card-body1">
                   <p>Create a germ-free, odor-free interior with our ozone air purification, ensuring a healthy driving environment.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span
-                      class="btn_icon"><i class="fa-regular fa-angle-right"></i></span> <span
-                      class="btn_text"><small>Details Service</small> <small>Details Service</small></span></a> -->
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  <img src="assets/images/icons/fresh-air.png" alt="">
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://www.pranaair.com/wp-content/uploads/2019/07/car-air-purifier-1.jpg" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>AIR FRESHENING</h6>
+                  </div>
                 </div>
-                <div class="item_content">
-                  <h3 class="item_title">Air Freshening</h3>
+                <div class="card-body1">
                   <p>Enjoy a delightful atmosphere with our air freshening service, leaving your car with a pleasant and lasting fragrance.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span
-                      class="btn_icon"><i class="fa-regular fa-angle-right"></i></span> <span
-                      class="btn_text"><small>Details Service</small> <small>Details Service</small></span></a> -->
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  <img src="assets/images/icons/acvent.png" alt="">
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://images.pexels.com/photos/2186257/pexels-photo-2186257.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>AC VENTS / SANITIZATION</h6>
+                  </div>
                 </div>
-                <div class="item_content">
-                  <h3 class="item_title">AC Vents / Sanitization</h3>
+                <div class="card-body1">
                   <p>Ensure fresh, sanitized air with our AC vent cleaning service, enhancing in-car air quality.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span class="btn_icon"><i
-                        class="fa-regular fa-angle-right"></i></span> <span class="btn_text"><small>Details
-                        Service</small> <small>Details Service</small></span></a> -->
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  <img src="assets/images/icons/wheel2.png" alt="">
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://www.carscoops.com/wp-content/uploads/2015/07/613fbb83-ferrari-1.jpg" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>RUBBER / PLASTIC</h6>
+                  </div>
                 </div>
-                <div class="item_content">
-                  <h3 class="item_title">Rubber / Plastic</h3>
+                <div class="card-body1">
                   <p>Restore and protect rubber/plastic parts, ensuring longevity and a polished appearance for your vehicle.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span class="btn_icon"><i
-                        class="fa-regular fa-angle-right"></i></span> <span class="btn_text"><small>Details
-                        Service</small> <small>Details Service</small></span></a> -->
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="service_item">
-                <div class="item_icon">
-                  <img src="assets/images/icons/dashboard.png" alt="">
+              <div class="card1">
+                <div class="card-header1">
+                  <div class="img-container">
+                    <img data-src="https://images.unsplash.com/photo-1694889648924-b6f624dbc61c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image" class="card-img lozad">
+                    <div class="fading-effect"></div>
+                  </div>
+                  <div class="header-text1">
+                    <h6>DASH BOARD</h6>
+                  </div>
                 </div>
-                <div class="item_content">
-                  <h3 class="item_title">Dash Board</h3>
+                <div class="card-body1">
                   <p>Revitalize your dashboard with our specialized treatment, restoring its original luster and appeal.</p>
-                    <!-- <a class="btn-link" href="service_details.html"><span
-                      class="btn_icon"><i class="fa-regular fa-angle-right"></i></span> <span
-                      class="btn_text"><small>Details Service</small> <small>Details Service</small></span></a> -->
                 </div>
               </div>
             </div>
@@ -404,7 +598,7 @@
       <!-- <section class="service_section bg_gray_dark">
         <div class="service_split_wrapper">
           <div class="service_split_item">
-            <div class="item_image"><img src="assets/images/services/service_img_1.jpg" alt="ProMotors - Service Image">
+            <div class="item_image"><img data-src="assets/images/services/service_img_1.jpg" alt="ProMotors - Service Image">
             </div>
             <div class="item_content">
               <div class="section_heading">
@@ -413,18 +607,18 @@
                 <div class="row">
                   <div class="col-md-6 col-sm-6">
                     <ul class="info_list unordered_list_block text-uppercase">
-                      <li><span class="info_icon"><img src="assets/images/icons/icon_square.svg"
+                      <li><span class="info_icon"><img data-src="assets/images/icons/icon_square.svg"
                             alt="ProMotors - Icon Square"> </span><span class="info_text">Same Day Service</span></li>
-                      <li><span class="info_icon"><img src="assets/images/icons/icon_square.svg"
+                      <li><span class="info_icon"><img data-src="assets/images/icons/icon_square.svg"
                             alt="ProMotors - Icon Square"> </span><span class="info_text">Online Appointment</span></li>
                     </ul>
                   </div>
                   <div class="col-md-6 col-sm-6">
                     <ul class="info_list unordered_list_block text-uppercase">
-                      <li><span class="info_icon"><img src="assets/images/icons/icon_square.svg"
+                      <li><span class="info_icon"><img data-src="assets/images/icons/icon_square.svg"
                             alt="ProMotors - Icon Square"> </span><span class="info_text">Convenient Location</span>
                       </li>
-                      <li><span class="info_icon"><img src="assets/images/icons/icon_square.svg"
+                      <li><span class="info_icon"><img data-src="assets/images/icons/icon_square.svg"
                             alt="ProMotors - Icon Square"> </span><span class="info_text">Complimentary Shuttle</span>
                       </li>
                     </ul>
@@ -434,7 +628,7 @@
             </div>
           </div>
           <div class="service_split_item">
-            <div class="item_image"><img src="assets/images/services/service_img_2.jpg" alt="ProMotors - Service Image">
+            <div class="item_image"><img data-src="assets/images/services/service_img_2.jpg" alt="ProMotors - Service Image">
             </div>
             <div class="item_content">
               <div class="section_heading">
@@ -448,7 +642,8 @@
           </div>
         </div>
       </section> -->
-      <section class="appointment_form_section section_space_lg"  id="contactus" style="background-image: url('assets/images/shapes/tyre_print_5.svg'),linear-gradient(#000000a8,#000000a8);background-repeat: no-repeat;background-size: cover;">
+      <section class="appointment_form_section section_space_lg" id="contactus"
+        style="background-image: url('assets/images/shapes/tyre_print_5.svg'),linear-gradient(#000000a8,#000000a8);background-repeat: no-repeat;background-size: cover;">
 
         <div class="container">
 
@@ -462,7 +657,8 @@
                 </div>
                 <h3 class="heading_text wow" data-splitting>Request An Appointment Online</h3>
 
-                <p class="heading_description mb-0">Reach out to us using the below form. We will get back right to you</p>
+                <p class="heading_description mb-0">Reach out to us using the below form. We will get back right to you
+                </p>
               </div>
             </div>
           </div>
@@ -476,7 +672,8 @@
                 <div class="form-group mb-0">
                   <label for="input_name">Your Name
                   </label>
-                  <input type="text" name="name" class="form-control" id="input_name" placeholder="Enter Your Name" required>
+                  <input type="text" name="name" class="form-control" id="input_name" placeholder="Enter Your Name"
+                    required>
                 </div>
               </div>
 
@@ -485,7 +682,8 @@
                 <div class="form-group mb-0">
                   <label for="input_phone">Your Phone
                   </label>
-                  <input type="tel" name="phone" class="form-control" id="input_phone" placeholder="Enter Your Phone" required>
+                  <input type="tel" name="phone" class="form-control" id="input_phone" placeholder="Enter Your Phone"
+                    required>
                 </div>
               </div>
 
@@ -512,7 +710,8 @@
                 <div class="form-group">
                   <label for="input_textarea">Your Message
                   </label>
-                  <textarea name="message" class="form-control" id="input_textarea" placeholder="Describe Your Problem" required>
+                  <textarea name="message" class="form-control" id="input_textarea" placeholder="Describe Your Problem"
+                    required>
 </textarea>
                 </div>
                 <!-- <button type="submit" class="btn btn-primary">
@@ -521,17 +720,11 @@
                 <button type="submit" class="fbutton">
                   <div class="svg-wrapper-1">
                     <div class="svg-wrapper">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                      >
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                         <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path
-                          fill="currentColor"
-                          d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
-                        ></path>
+                        <path fill="currentColor"
+                          d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                        </path>
                       </svg>
                     </div>
                   </div>
@@ -539,74 +732,74 @@
                 </button>
                 <style>
                   .fbutton {
-  font-family: inherit;
-  font-size: 20px;
-  background: #af0614;
-  color: white;
-  padding: 0.7em 1em;
-  padding-left: 0.9em;
-  display: flex;
-  align-items: center;
-  border: none;
-  border-radius: 16px;
-  overflow: hidden;
-  transition: all 0.2s;
-  cursor: pointer;
-}
+                    font-family: inherit;
+                    font-size: 20px;
+                    background: #af0614;
+                    color: white;
+                    padding: 0.7em 1em;
+                    padding-left: 0.9em;
+                    display: flex;
+                    align-items: center;
+                    border: none;
+                    border-radius: 16px;
+                    overflow: hidden;
+                    transition: all 0.2s;
+                    cursor: pointer;
+                  }
 
-.fbutton span {
-  display: block;
-  margin-left: 0.3em;
-  transition: all 0.3s ease-in-out;
-}
+                  .fbutton span {
+                    display: block;
+                    margin-left: 0.3em;
+                    transition: all 0.3s ease-in-out;
+                  }
 
-.fbutton svg {
-  display: block;
-  transform-origin: center center;
-  transition: transform 0.3s ease-in-out;
-}
+                  .fbutton svg {
+                    display: block;
+                    transform-origin: center center;
+                    transition: transform 0.3s ease-in-out;
+                  }
 
-.fbutton:hover .svg-wrapper {
-  animation: fly-1 0.6s ease-in-out infinite alternate;
-}
+                  .fbutton:hover .svg-wrapper {
+                    animation: fly-1 0.6s ease-in-out infinite alternate;
+                  }
 
-.fbutton:hover svg {
-  transform: translateX(200%) rotate(45deg) scale(1.1);
-}
+                  .fbutton:hover svg {
+                    transform: translateX(200%) rotate(45deg) scale(1.1);
+                  }
 
-.fbutton:hover span {
-  transform: translateX(8em);
-}
+                  .fbutton:hover span {
+                    transform: translateX(8em);
+                  }
 
-.fbutton:active {
-  transform: scale(0.95);
-}
+                  .fbutton:active {
+                    transform: scale(0.95);
+                  }
 
-@keyframes fly-1 {
-  from {
-    transform: translateY(0.1em);
-  }
+                  @keyframes fly-1 {
+                    from {
+                      transform: translateY(0.1em);
+                    }
 
-  to {
-    transform: translateY(-0.1em);
-  }
-}
-
+                    to {
+                      transform: translateY(-0.1em);
+                    }
+                  }
                 </style>
               </div>
             </div>
           </form>
         </div>
-    </section>
+      </section>
     </main>
     <footer class="site_footer">
 
       <div class="footer_content_area bg_gray_dark">
 
-        <div class="container">
+        <div class="container" style="margin: 0;">
 
-          <div class="row">
-            <section class="contact_section section_space_md" style="background-image: url('assets/images/shapes/tyre_print.svg'),linear-gradient(#000000a8,#000000a8);background-repeat: no-repeat;background-size: cover;">
+          <div class="row"style="width: 100vw;">
+            <section class="contact_section section_space_md"
+              style="background-image: url('assets/images/shapes/tyre_print.svg'),linear-gradient(#000000a8,#000000a8);background-repeat: no-repeat;background-size: cover;">
               <div class="container">
                 <div class="section_heading">
                   <h3 class="heading_text mb-0 wow" data-splitting>Contact Us</h3>
@@ -617,7 +810,7 @@
                       <h3 class="item_title">Address</h3>
                       <ul class="info_list unordered_list_block pe-lg-2">
                         <li><span class="info_text mb-3">Satyam Complex, B/h. Perfect Hero Show-Room, Gondal Road,
-                          Nr. Gondal Chowkadi, Rajkot-360 004.
+                            Nr. Gondal Chowkadi, Rajkot-360 004.
                           </span></li>
                       </ul>
                     </div>
@@ -632,15 +825,15 @@
                         <span>Closed</span>
                       </div>
                       <style>
-                        .customTimings{
+                        .customTimings {
                           display: grid;
-                          grid-template-columns: repeat(2,1fr);
-                          grid-template-rows: repeat(2,1fr);
+                          grid-template-columns: repeat(2, 1fr);
+                          grid-template-rows: repeat(2, 1fr);
                           row-gap: 1rem;
                           column-gap: 1rem;
                           margin-top: 1rem;
                         }
-                      </style>                   
+                      </style>
                     </div>
                   </div>
                   <div class="col-lg-4">
@@ -650,35 +843,63 @@
                         <li>
                           <span class="info_text mb-3">
                             <span class="f-icon">
-                              <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                              <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                  <path
+                                    d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z"
+                                    stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  </path>
+                                </g>
+                              </svg>
                             </span>
                             <span class="d-block">
-                              <a href="tel:+91777897744">+91 77789 77442</a> 
+                              <a href="tel:+91777897744">+91 77789 77442</a>
                             </span>
                           </span>
                         </li>
                         <li>
                           <span class="info_text mb-3">
                             <span class="f-icon">
-                           <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3.06167 7.24464C3.10844 6.22264 3.26846 5.56351 3.48487 5.00402L3.48778 4.99629C3.70223 4.42695 4.03818 3.91119 4.47224 3.48489L4.47833 3.47891L4.48431 3.47282C4.91096 3.0382 5.42691 2.70258 5.99575 2.4887L6.00556 2.48495C6.56378 2.26786 7.22162 2.10843 8.24447 2.06167M3.06167 7.24464C3.0125 8.33659 2.99997 8.67508 2.99997 11.5063C2.99997 14.3381 3.01181 14.6758 3.06164 15.768M3.06167 7.24464L3.06167 7.52008M3.48867 18.0168C3.70255 18.5856 4.03817 19.1015 4.47279 19.5282L4.47887 19.5342L4.48484 19.5402C4.91116 19.9743 5.42694 20.3103 5.99628 20.5247L6.00478 20.5279C6.56351 20.7446 7.22167 20.9041 8.24447 20.9509M3.48867 18.0168L3.48492 18.0069C3.26783 17.4487 3.1084 16.7909 3.06164 15.768M3.48867 18.0168L3.47585 17.9492M3.06164 15.768L3.07839 15.8562M3.06164 15.768L3.06164 15.4919M3.47585 17.9492L3.07839 15.8562M3.47585 17.9492C3.30704 17.5033 3.13322 16.881 3.07839 15.8562M3.47585 17.9492C3.48177 17.9649 3.48768 17.9803 3.49359 17.9955C3.70766 18.5726 4.04685 19.0952 4.48679 19.5256C4.91708 19.9655 5.43944 20.3046 6.01636 20.5187C6.47934 20.699 7.13172 20.8875 8.24431 20.9385C9.3671 20.9896 9.71399 21 12.5062 21C15.2985 21 15.6457 20.9896 16.7685 20.9385C17.8824 20.8874 18.534 20.6979 18.9954 20.519C19.5726 20.305 20.0953 19.9657 20.5257 19.5256C20.9655 19.0953 21.3046 18.573 21.5187 17.9961C21.699 17.5331 21.8875 16.8808 21.9384 15.7682C21.9895 14.6454 22 14.2978 22 11.5063C22 8.71472 21.9895 8.36684 21.9384 7.24405C21.8871 6.12427 21.6959 5.47168 21.5161 5.00992C21.2811 4.40322 20.9831 3.94437 20.525 3.48627C20.0678 3.02999 19.6102 2.73179 19.003 2.49654C18.5396 2.31537 17.8866 2.12531 16.7685 2.07406C16.6712 2.06964 16.5798 2.06552 16.4921 2.06168M3.07839 15.8562C3.07684 15.8273 3.07539 15.7981 3.07403 15.7685C3.06961 15.6712 3.06548 15.5797 3.06164 15.4919M8.24447 2.06167C9.33668 2.01184 9.67505 2 12.5062 2C15.3374 2 15.6756 2.01252 16.7675 2.06168M8.24447 2.06167L8.52062 2.06167M16.7675 2.06168L16.4921 2.06168M16.7675 2.06168C17.7897 2.10844 18.4489 2.26844 19.0085 2.48487L19.0162 2.48781C19.5855 2.70226 20.1013 3.03821 20.5276 3.47227L20.5335 3.4783L20.5396 3.48422C20.9737 3.91055 21.3096 4.42646 21.5239 4.99596L21.5275 5.00559C21.7446 5.56381 21.9041 6.22165 21.9508 7.2445M8.52062 2.06167L16.4921 2.06168M8.52062 2.06167C9.44548 2.02123 9.95666 2.01253 12.5062 2.01253C15.056 2.01253 15.5671 2.02124 16.4921 2.06168M8.52062 2.06167C8.43284 2.06551 8.34134 2.06964 8.24402 2.07406C7.13004 2.12512 6.47843 2.31464 6.01708 2.49358C5.43767 2.70837 4.91328 3.04936 4.48192 3.49186C4.0281 3.94756 3.73105 4.40422 3.49655 5.0094C3.31536 5.4728 3.12527 6.12614 3.07402 7.24434C3.06961 7.34135 3.06549 7.43257 3.06167 7.52008M21.9508 15.768C21.9041 16.7908 21.7446 17.449 21.5279 18.0077L21.5247 18.0162C21.3102 18.5856 20.9743 19.1013 20.5402 19.5276L20.5341 19.5336L20.5282 19.5397C20.1015 19.9743 19.5856 20.3099 19.0167 20.5238L19.0069 20.5276C18.4487 20.7447 17.7908 20.9041 16.768 20.9509M3.06164 15.4919C3.0212 14.567 3.0125 14.0558 3.0125 11.5063C3.0125 8.95591 3.0212 8.44544 3.06167 7.52008M3.06164 15.4919L3.06167 7.52008M10.8155 15.5881C11.3515 15.8101 11.926 15.9244 12.5062 15.9244C13.678 15.9244 14.8018 15.4589 15.6304 14.6304C16.4589 13.8018 16.9244 12.678 16.9244 11.5063C16.9244 10.3345 16.4589 9.21072 15.6304 8.38215C14.8018 7.55359 13.678 7.0881 12.5062 7.0881C11.926 7.0881 11.3515 7.20238 10.8155 7.42442C10.2794 7.64645 9.79239 7.97189 9.38213 8.38215C8.97187 8.79242 8.64643 9.27947 8.42439 9.81551C8.20236 10.3515 8.08808 10.9261 8.08808 11.5063C8.08808 12.0865 8.20236 12.661 8.42439 13.197C8.64643 13.7331 8.97187 14.2201 9.38213 14.6304C9.79239 15.0406 10.2794 15.3661 10.8155 15.5881ZM9.37229 8.37231C10.2035 7.54113 11.3308 7.07418 12.5062 7.07418C13.6817 7.07418 14.809 7.54113 15.6402 8.37231C16.4714 9.20349 16.9383 10.3308 16.9383 11.5063C16.9383 12.6817 16.4714 13.809 15.6402 14.6402C14.809 15.4714 13.6817 15.9383 12.5062 15.9383C11.3308 15.9383 10.2035 15.4714 9.37229 14.6402C8.54111 13.809 8.07416 12.6817 8.07416 11.5063C8.07416 10.3308 8.54111 9.20349 9.37229 8.37231ZM19.434 6.04229C19.434 6.37873 19.3003 6.70139 19.0625 6.93929C18.8246 7.17719 18.5019 7.31084 18.1655 7.31084C17.829 7.31084 17.5064 7.17719 17.2685 6.93929C17.0306 6.70139 16.8969 6.37873 16.8969 6.04229C16.8969 5.70585 17.0306 5.38319 17.2685 5.1453C17.5064 4.9074 17.829 4.77375 18.1655 4.77375C18.5019 4.77375 18.8246 4.9074 19.0625 5.1453C19.3003 5.38319 19.434 5.70585 19.434 6.04229Z" stroke="#ffffff" stroke-linejoin="round"></path> </g></svg>
+                              <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                  <path
+                                    d="M3.06167 7.24464C3.10844 6.22264 3.26846 5.56351 3.48487 5.00402L3.48778 4.99629C3.70223 4.42695 4.03818 3.91119 4.47224 3.48489L4.47833 3.47891L4.48431 3.47282C4.91096 3.0382 5.42691 2.70258 5.99575 2.4887L6.00556 2.48495C6.56378 2.26786 7.22162 2.10843 8.24447 2.06167M3.06167 7.24464C3.0125 8.33659 2.99997 8.67508 2.99997 11.5063C2.99997 14.3381 3.01181 14.6758 3.06164 15.768M3.06167 7.24464L3.06167 7.52008M3.48867 18.0168C3.70255 18.5856 4.03817 19.1015 4.47279 19.5282L4.47887 19.5342L4.48484 19.5402C4.91116 19.9743 5.42694 20.3103 5.99628 20.5247L6.00478 20.5279C6.56351 20.7446 7.22167 20.9041 8.24447 20.9509M3.48867 18.0168L3.48492 18.0069C3.26783 17.4487 3.1084 16.7909 3.06164 15.768M3.48867 18.0168L3.47585 17.9492M3.06164 15.768L3.07839 15.8562M3.06164 15.768L3.06164 15.4919M3.47585 17.9492L3.07839 15.8562M3.47585 17.9492C3.30704 17.5033 3.13322 16.881 3.07839 15.8562M3.47585 17.9492C3.48177 17.9649 3.48768 17.9803 3.49359 17.9955C3.70766 18.5726 4.04685 19.0952 4.48679 19.5256C4.91708 19.9655 5.43944 20.3046 6.01636 20.5187C6.47934 20.699 7.13172 20.8875 8.24431 20.9385C9.3671 20.9896 9.71399 21 12.5062 21C15.2985 21 15.6457 20.9896 16.7685 20.9385C17.8824 20.8874 18.534 20.6979 18.9954 20.519C19.5726 20.305 20.0953 19.9657 20.5257 19.5256C20.9655 19.0953 21.3046 18.573 21.5187 17.9961C21.699 17.5331 21.8875 16.8808 21.9384 15.7682C21.9895 14.6454 22 14.2978 22 11.5063C22 8.71472 21.9895 8.36684 21.9384 7.24405C21.8871 6.12427 21.6959 5.47168 21.5161 5.00992C21.2811 4.40322 20.9831 3.94437 20.525 3.48627C20.0678 3.02999 19.6102 2.73179 19.003 2.49654C18.5396 2.31537 17.8866 2.12531 16.7685 2.07406C16.6712 2.06964 16.5798 2.06552 16.4921 2.06168M3.07839 15.8562C3.07684 15.8273 3.07539 15.7981 3.07403 15.7685C3.06961 15.6712 3.06548 15.5797 3.06164 15.4919M8.24447 2.06167C9.33668 2.01184 9.67505 2 12.5062 2C15.3374 2 15.6756 2.01252 16.7675 2.06168M8.24447 2.06167L8.52062 2.06167M16.7675 2.06168L16.4921 2.06168M16.7675 2.06168C17.7897 2.10844 18.4489 2.26844 19.0085 2.48487L19.0162 2.48781C19.5855 2.70226 20.1013 3.03821 20.5276 3.47227L20.5335 3.4783L20.5396 3.48422C20.9737 3.91055 21.3096 4.42646 21.5239 4.99596L21.5275 5.00559C21.7446 5.56381 21.9041 6.22165 21.9508 7.2445M8.52062 2.06167L16.4921 2.06168M8.52062 2.06167C9.44548 2.02123 9.95666 2.01253 12.5062 2.01253C15.056 2.01253 15.5671 2.02124 16.4921 2.06168M8.52062 2.06167C8.43284 2.06551 8.34134 2.06964 8.24402 2.07406C7.13004 2.12512 6.47843 2.31464 6.01708 2.49358C5.43767 2.70837 4.91328 3.04936 4.48192 3.49186C4.0281 3.94756 3.73105 4.40422 3.49655 5.0094C3.31536 5.4728 3.12527 6.12614 3.07402 7.24434C3.06961 7.34135 3.06549 7.43257 3.06167 7.52008M21.9508 15.768C21.9041 16.7908 21.7446 17.449 21.5279 18.0077L21.5247 18.0162C21.3102 18.5856 20.9743 19.1013 20.5402 19.5276L20.5341 19.5336L20.5282 19.5397C20.1015 19.9743 19.5856 20.3099 19.0167 20.5238L19.0069 20.5276C18.4487 20.7447 17.7908 20.9041 16.768 20.9509M3.06164 15.4919C3.0212 14.567 3.0125 14.0558 3.0125 11.5063C3.0125 8.95591 3.0212 8.44544 3.06167 7.52008M3.06164 15.4919L3.06167 7.52008M10.8155 15.5881C11.3515 15.8101 11.926 15.9244 12.5062 15.9244C13.678 15.9244 14.8018 15.4589 15.6304 14.6304C16.4589 13.8018 16.9244 12.678 16.9244 11.5063C16.9244 10.3345 16.4589 9.21072 15.6304 8.38215C14.8018 7.55359 13.678 7.0881 12.5062 7.0881C11.926 7.0881 11.3515 7.20238 10.8155 7.42442C10.2794 7.64645 9.79239 7.97189 9.38213 8.38215C8.97187 8.79242 8.64643 9.27947 8.42439 9.81551C8.20236 10.3515 8.08808 10.9261 8.08808 11.5063C8.08808 12.0865 8.20236 12.661 8.42439 13.197C8.64643 13.7331 8.97187 14.2201 9.38213 14.6304C9.79239 15.0406 10.2794 15.3661 10.8155 15.5881ZM9.37229 8.37231C10.2035 7.54113 11.3308 7.07418 12.5062 7.07418C13.6817 7.07418 14.809 7.54113 15.6402 8.37231C16.4714 9.20349 16.9383 10.3308 16.9383 11.5063C16.9383 12.6817 16.4714 13.809 15.6402 14.6402C14.809 15.4714 13.6817 15.9383 12.5062 15.9383C11.3308 15.9383 10.2035 15.4714 9.37229 14.6402C8.54111 13.809 8.07416 12.6817 8.07416 11.5063C8.07416 10.3308 8.54111 9.20349 9.37229 8.37231ZM19.434 6.04229C19.434 6.37873 19.3003 6.70139 19.0625 6.93929C18.8246 7.17719 18.5019 7.31084 18.1655 7.31084C17.829 7.31084 17.5064 7.17719 17.2685 6.93929C17.0306 6.70139 16.8969 6.37873 16.8969 6.04229C16.8969 5.70585 17.0306 5.38319 17.2685 5.1453C17.5064 4.9074 17.829 4.77375 18.1655 4.77375C18.5019 4.77375 18.8246 4.9074 19.0625 5.1453C19.3003 5.38319 19.434 5.70585 19.434 6.04229Z"
+                                    stroke="#ffffff" stroke-linejoin="round"></path>
+                                </g>
+                              </svg>
                             </span>
                             <span class="d-block">
                               <a href="https://instagram.com/miracle_carstudios">@miracle_carstudios</a>
                             </span>
                           </span>
-                      </li>
+                        </li>
                         <li>
-                            <span class="info_text">
-                              <span class="f-icon">
-                                <svg fill="#ffffff" width="25px" height="25px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M0 1694.235h1920V226H0v1468.235ZM112.941 376.664V338.94H1807.06v37.723L960 1111.233l-847.059-734.57ZM1807.06 526.198v950.513l-351.134-438.89-88.32 70.475 378.353 472.998H174.042l378.353-472.998-88.32-70.475-351.134 438.89V526.198L960 1260.768l847.059-734.57Z" fill-rule="evenodd"></path> </g></svg>
-                              </span>
-                              <span class="d-block">
-                                <a href="mailto:miracle.carstudio@gmail.com">miracle.carstudio@gmail.com</a>
-                              </span>
+                          <span class="info_text">
+                            <span class="f-icon">
+                              <svg fill="#ffffff" width="25px" height="25px" viewBox="0 0 1920 1920"
+                                xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                  <path
+                                    d="M0 1694.235h1920V226H0v1468.235ZM112.941 376.664V338.94H1807.06v37.723L960 1111.233l-847.059-734.57ZM1807.06 526.198v950.513l-351.134-438.89-88.32 70.475 378.353 472.998H174.042l378.353-472.998-88.32-70.475-351.134 438.89V526.198L960 1260.768l847.059-734.57Z"
+                                    fill-rule="evenodd"></path>
+                                </g>
+                              </svg>
                             </span>
+                            <span class="d-block">
+                              <a href="mailto:miracle.carstudio@gmail.com">miracle.carstudio@gmail.com</a>
+                            </span>
+                          </span>
                         </li>
                         <style>
-                         .info_list .info_text{
+                          .info_list .info_text {
                             display: flex;
                             gap: 1rem;
                             align-items: center;
@@ -688,7 +909,9 @@
                     </div>
                   </div>
                   <div class="col-12">
-                    <div class="gmap_canvas"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.838241052856!2d70.79476748885496!3d22.246215400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cbb6ef457b97%3A0x676610b1e724bfa5!2sMiracle%20Car%20Detailer!5e0!3m2!1sen!2sin!4v1702114605676!5m2!1sen!2sin" loading="lazy"></iframe>
+                    <div class="gmap_canvas"><iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.838241052856!2d70.79476748885496!3d22.246215400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cbb6ef457b97%3A0x676610b1e724bfa5!2sMiracle%20Car%20Detailer!5e0!3m2!1sen!2sin!4v1702114605676!5m2!1sen!2sin"
+                        loading="lazy"></iframe>
                     </div>
                   </div>
                 </div>
@@ -704,16 +927,22 @@
         <div class="container">
 
           <p class="copyright_text text-center mb-0"><a href="#"></a> ©
-            <b>Miracle Car Studios</b> All rights reserved Copyrights 2023</p>
+            <b>Miracle Car Studios</b> All rights reserved Copyrights 2023
+          </p>
         </div>
       </div>
     </footer>
   </div>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+  <script>
+    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+  </script>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/bootstrap-dropdown-ml-hack.js"></script>
-  <!-- <script src="assets/js/cursor.js"></script> -->
+  <script src="assets/js/cursor.js"></script>
   <script src="assets/js/wow.min.js"></script>
   <script src="assets/js/tilt.min.js"></script>
   <script src="assets/js/parallaxie.js"></script>
@@ -730,7 +959,6 @@
   <script src="assets/js/dark-light.js"></script>
   <script src="assets/js/main.js"></script>
 
-</body>
-<!-- Mirrored from html.merku.love/promotors/service.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Dec 2023 07:06:54 GMT -->
+</body> 
 
 </html>

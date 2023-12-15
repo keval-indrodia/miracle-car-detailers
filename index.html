@@ -7,6 +7,8 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Miracle Car Studios
   </title>
+  <meta name="description" content="Revitalize your car's appearance with professional car detailing services. Our experts offer interior and exterior detailing, ceramic coating, and more.">
+  <meta name="keywords" content="car detailing, auto detailing, car cleaning, ceramic coating, vehicle detailing, interior detailing, exterior detailing, car care, automotive detailing">
   <!-- Disable caching meta tags -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
@@ -334,7 +336,7 @@
             <div class="col-lg-6">
 
               <div class="hero_section_image"><img data-parallax='{"x" : -200, "smoothness": 8}'
-                  src="assets/images/hero/hero-car-1.png" alt="Miracle Car Detailers – Car Service Image">
+                  data-src="assets/images/hero/hero-car-1.png" alt="Miracle Car Detailers – Car Service Image" class="lozad">
               </div>
             </div>
           </div>
@@ -525,7 +527,7 @@
             </div>
           </div>
         </div>
-        <button onclick="toServicePage()" class="animated-button">
+        <a href="services.html" class="animated-button">
           <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
@@ -538,7 +540,21 @@
               d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
             </path>
           </svg>
-        </button>
+        </a>
+        <!-- <button onclick="toServicePage()" class="animated-button">
+          <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+            </path>
+          </svg>
+          <span class="text">All Services</span>
+          <span class="circle"></span>
+          <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+            </path>
+          </svg>
+        </button> -->
       </section>
       <style>
         .item_image img {
@@ -548,7 +564,7 @@
       </style>
       <script>
         const toServicePage = () => {
-          window.location.href = 'service.html';
+          window.location.href = 'services.html';
         };
       </script>
       <style>
@@ -571,6 +587,7 @@
           overflow: hidden;
           transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
           margin: 1.5rem 0 5rem;
+          width: max-content;
         }
 
         .animated-button svg {
@@ -725,8 +742,8 @@
 
             <div class="item_image">
               <!-- <img src="assets/images/services/service_img_1.jpg" alt="Miracle Car Detailers - Service Image"> -->
-              <img
-                src="https://images.pexels.com/photos/1104768/pexels-photo-1104768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              <img class="lozad"
+                data-src="https://images.pexels.com/photos/1104768/pexels-photo-1104768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 alt="">
             </div>
 
@@ -796,7 +813,7 @@
           <div class="service_split_item">
 
             <div class="item_image">
-              <img src="assets/images/services/service_img_2.jpg" alt=" ">
+              <img class="lozad" data-src="assets/images/services/service_img_2.jpg" alt=" ">
               <!-- <img src="https://img.freepik.com/free-photo/headlights-new-red-car-car-dealership_146671-14964.jpg?w=826&t=st=1702218282~exp=1702218882~hmac=19f53eab3589d09fd7953e234af60841037b2ac5a69f6add0c7bc6759cf174a7" alt=""> -->
             </div>
 
@@ -918,7 +935,7 @@
         <div class="container">
           <div class="row align-items-center justify-content-lg-between">
             <div class="col-lg-6 order-lg-last">
-              <div class="image_widget"><img src="assets/images/about/about_image_8.jpg"
+              <div class="image_widget"><img class="lozad" data-src="assets/images/about/about_image_8.jpg"
                   alt="Miracle Car Detailers - About Image"></div>
             </div>
             <div class="col-lg-6">
@@ -973,24 +990,24 @@
           </div>
           <div class="row">
             <div class="col-lg-6">
-              <div class="image_before_after"><img src="assets/images/portfolio/portfolio_img_5.jpg"
+              <div class="image_before_after"><img class="lozad" data-src="assets/images/portfolio/portfolio_img_5.jpg"
                   alt="Miracle Car Detailers - Car Repair Service">
 
-                <img src="assets/images/portfolio/portfolio_img_6.jpg" alt="Miracle Car Detailers - Car Repair Service">
+                <img class="lozad" data-src="assets/images/portfolio/portfolio_img_6.jpg" alt="Miracle Car Detailers - Car Repair Service">
 
               </div>
               <!-- <span class="img_label">Before</span>
               <span class="img_label">After</span> -->
             </div>
             <div class="col-lg-6">
-              <div class="image_before_after"><img src="assets/images/portfolio/portfolio_img_7.jpg"
+              <div class="image_before_after"><img class="lozad" data-src="assets/images/portfolio/portfolio_img_7.jpg"
                   alt="Miracle Car Detailers - Car Repair Service"> <img
-                  src="assets/images/portfolio/portfolio_img_8.jpg" alt="Miracle Car Detailers - Car Repair Service">
+                  class="lozad" data-src="assets/images/portfolio/portfolio_img_8.jpg" alt="Miracle Car Detailers - Car Repair Service">
               </div>
             </div>
           </div>
           <br>
-          <button onclick="toGalleryPage()" class="animated-button">
+          <a href="gallery.html" class="animated-button">
             <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
@@ -1003,7 +1020,21 @@
                 d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
               </path>
             </svg>
-          </button>
+          </a>
+          <!-- <button onclick="toGalleryPage()" class="animated-button">
+            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+              </path>
+            </svg>
+            <span class="text">Gallery</span>
+            <span class="circle"></span>
+            <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+              </path>
+            </svg>
+          </button> -->
           <script>
             const toGalleryPage = () => {
               window.location.href = 'gallery.html';
@@ -1019,11 +1050,11 @@
         </div>
         <div class="brand_logo_carousel align-items-center"
           style="display: flex;align-items: center;justify-content: space-around;">
-          <div class="col-"><a class="brand_logo_item" href="#!"><img src="assets/images/brands/brand_logo_img_9.png"
+          <div class="col-"><a class="brand_logo_item" href="#!"><img class="lozad" data-src="assets/images/brands/brand_logo_img_9.png"
                 alt=""></a></div>
-          <div class="col-"><a class="brand_logo_item" href="#!"><img src="assets/images/brands/brand_logo_img_10.png"
+          <div class="col-"><a class="brand_logo_item" href="#!"><img class="lozad" data-src="assets/images/brands/brand_logo_img_10.png"
                 alt=""></a></div>
-          <div class="col-"><a class="brand_logo_item" href="#!"><img src="assets/images/brands/brand_logo_img_11.png"
+          <div class="col-"><a class="brand_logo_item" href="#!"><img class="lozad" data-src="assets/images/brands/brand_logo_img_11.png"
                 alt=""></a></div>
         </div>
         <style>
