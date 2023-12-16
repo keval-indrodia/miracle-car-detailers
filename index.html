@@ -1634,7 +1634,14 @@
       console.error("Couldn't find elements: heroSection or customNav");
     }
   </script>
-  
+    <script>
+      var welcomeWrapper = document.querySelector('.welcome');
+      var pageWrapper = document.querySelector('.page_wrapper');
+      if (sessionStorage.getItem('welcomeScreen') == 'true'){
+        welcomeWrapper.remove();
+        pageWrapper.style.display = 'block';
+      }
+    </script>
   <script src="assets/js/jquery.min.js">
   </script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>

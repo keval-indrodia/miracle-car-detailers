@@ -59,8 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     } else {
         // If welcome screen has been shown, reveal page_wrapper immediately
-        pageWrapper.style.display = 'none';
-        welcomeWrapper.remove();
+        //welcomeWrapper.remove();
         pageWrapper.style.display = 'block';
     }
 });
