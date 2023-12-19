@@ -32,4 +32,10 @@
         <changefreq>always</changefreq>
         <priority>0.5</priority>
     </url>
+     <url>
+        <loc>https://miraclecardetailers.in/faq.html</loc>
+        <lastmod>2023-12-15</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
 </urlset>
