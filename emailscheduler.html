@@ -1,21 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Scheduler</title>
     <style>
-        body{
-            margin: 0;padding: 0;background-color: #0b0b0b;
+        @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&amp;display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;display=swap");
+    *{margin: 0;padding: 0;}
+        /* width */
+        ::-webkit-scrollbar {
+            width: 0px;
+          }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            /* background-image: url('https://images.pexels.com/photos/15400946/pexels-photo-15400946/free-photo-of-a-modern-kia-k5-in-a-garage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); */
+            background-image: url('https://www.wallpaperflare.com/static/559/495/794/mclaren-p1-gtr-hybrid-sports-car-4k-red-wallpaper-preview.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
+        
+        .container {
+            background-color: rgba(25, 25, 25, 0.685);
+            border-radius: 10px;
+            padding: 20px 30px;
+            backdrop-filter: blur(10px);
+            margin: 2rem auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin: 10px auto 20px;
+            font-family: 'Chakra Petch', sans-serif;
+        }
+        
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            color: #fff;
+            font-family: 'Mulish', sans-serif;
+        }
+        
+        textarea{
+            resize: vertical;
+            font-family: 'Mulish', sans-serif;
+        }
+        
+        input[type="email"],
+        input[type="text"],
+        textarea,
+        input[type="number"],
+        input[type="datetime-local"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            margin: 10px auto 0px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(3, 3, 3, 0.598);
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+        
+        input[type="submit"] {
+            background-color: #007bff;
+            background-color: #da0000;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+            background-color: #8f0101;
+        }
+        
+        /* Remove up and down buttons in numeric field */
+        input[type='number']::-webkit-inner-spin-button{
+            display: none;
+        }
+        input[type=number]{
+            -moz-appearance: textfield;
+        }
+        /* Change the color of the datetime picker icon to white */
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
     </style>
 </head>
+
 <body>
+    <div class="container">
+        <h1>Email Scheduler</h1>
+        <div class="formContainer">
+            <form id="emailForm" action="https://gmail-scheduler.onrender.com/api/savedata" method="post">  
+                <label for="recipient">Recipient:</label>
+                <input type="email" id="recipient" name="recipient" required><br><br>
+                <label for="custName">Customer Name:</label>
+                <input type="text" id="custName" name="custName" required><br><br>
+                <label for="custPhNo">Phone No:</label>
+                <input type="number" inputmode="numeric" id="custPhNo" name="custPhNo" required><br><br>
+                <label for="carModel">Car Model:</label>
+                <input type="text" id="carModel" name="carModel" required><br><br>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" required></textarea><br><br>
+                <label for="date">Date and Time:</label>
+                <input type="datetime-local" id="date" onfocus="this.showPicker?.()" name="date" required><br><br>
+                <input type="submit" value="Schedule Email">
+            </form>
+        </div>
+    </div>
+<script>
+    const datetimeinput = document.getElementById('date');
+
+    datetimeinput.addEventListener('click',()=>{
+        datetimeinput.focus
+    })
+</script>
     <script>
-        window.onload = () => {
-            // window.location.href = "https://gmail-scheduler.onrender.com";
-            window.location.replace("https://gmail-scheduler.onrender.com");
-        };
+        const form = document.getElementById('emailForm');
+        form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            console.log('Data:', data);
+
+            const responseData = await fetch('https://gmail-scheduler.onrender.com/api/savedata', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (responseData.ok) {
+                alert('Email scheduled successfully!');
+                form.reset();
+            } else {
+                alert('Failed to schedule email. Please try again.');
+            }
+        });
+
     </script>
 </body>
+
 </html>
